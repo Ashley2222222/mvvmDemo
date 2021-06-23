@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="comm_confirm">确定</string>
+    <!--选择器-->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+
+    <!--Toast-->
+    <string name="font_type">微软雅黑</string>
+    <string name="font_type2">宋体</string>
+    <string name="font_type3">华文行楷</string>
+
+    <string name="comm_sys_onLoading">数据加载中......</string>
+</resources>

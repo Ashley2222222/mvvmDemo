@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="height_title_bar">45dp</dimen>    <!--标题前栏高度-->
+    <dimen name="icon_normal">45dp</dimen>
+    <dimen name="margin_large_x">26dp</dimen>
+    <!--5dp-->
+    <dimen name="fix_5dp">5dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="font_title_bar">20sp</dimen>
+</resources>

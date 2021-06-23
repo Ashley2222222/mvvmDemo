@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.gci.mvvmdemo.MainVM" />
+        <variable
+            name="user"
+            type="com.gci.mvvmdemo.User" />
+        <variable
+            name="loginInfo"
+            type="com.gci.mvvmdemo.LoginInfo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.text}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:onClick="@{viewModel::click}"
+            android:layout_height="wrap_content"/>
+     <Button
+         android:text="图片选择器"
+            android:layout_width="wrap_content"
+            android:onClick="@{viewModel::toPhoto}"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:error="@{@drawable/add}"
+            app:placeholder="@{@drawable/add}"
+            app:imageUrl="@{user.headerUrl}"
+            android:clickable="true"
+            android:onClick="@{viewModel::click2}"
+   />
+
+        <com.gci.mvvmdemo.LoginAutoCompleteEdittext
+            android:id="@+id/username"
+            android:layout_width="230dp"
+            android:text="@{loginInfo.account}"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="login_username_hint"
+            android:paddingLeft="0dip"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</layout>

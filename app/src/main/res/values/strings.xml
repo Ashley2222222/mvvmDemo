@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MVVMDemo</string>
+    <string name="login_username_width">1</string>
+    <string name="picture_title">photo</string>
+</resources>

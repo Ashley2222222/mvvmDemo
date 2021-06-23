@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion  cfgs.targetSdkVersion
+        versionCode cfgs.versionCode
+        versionName  cfgs.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'androidx.multidex:multidex:2.0.1'
+    api 'com.google.android.material:material:1.1.0'
+    api 'com.google.code.gson:gson:2.8.5'//解析json
+    api 'com.github.dmytrodanylyk.shadow-layout:library:1.0.3'//阴影
+    api 'androidx.percentlayout:percentlayout:1.0.0'   //百分比布局
+    api 'androidx.recyclerview:recyclerview:1.0.0'
+    api 'androidx.cardview:cardview:1.0.0'
+
+    api 'org.greenrobot:greendao:3.2.2'   //greendao依赖
+    api 'org.greenrobot:greendao-generator:3.2.2'   //greendao依赖
+    api 'io.github.yuweiguocn:GreenDaoUpgradeHelper:2.2.1'//greendao更新辅助类，新建辅助类，并继承DaoMaster.OpenHelper
+    api 'com.wang.avi:library:2.1.3'// 加载前小动画
+    api 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+    api 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+
+    //RxJava
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'// 必要rxandrroid依赖，切线程时需要用到
+    //RxAndroid
+    api 'io.reactivex.rxjava2:rxjava:2.2.6'// 必要rxjava2依赖
+//Retrofit 负责请求的数据和请求的结果，使用接口的方式呈现，
+// OkHttp 负责请求的过程，RxJava 负责异步，各种线程之间的切换。
+//    //retrofit
+    api 'com.squareup.retrofit2:retrofit:2.9.0' // 必要retrofit依赖
+//    //retrofit依赖Gson
+    api 'com.squareup.retrofit2:converter-gson:2.3.0' // 必要依赖，解析json字符所用
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'// 必要依赖，和Rxjava结合必须用到，下面会提到
+    api 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+    // Lifecycles, LiveData and ViewModel
+    api "android.arch.lifecycle:runtime:${cfgs.lifecycleRuntime}"
+    api "android.arch.lifecycle:extensions:${cfgs.lifecycle}"
+    // LiveData adapter rxjava2
+    api "android.arch.lifecycle:reactivestreams:${cfgs.lifecycle}"
+    // retrofit-adapter
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    // dagger
+    annotationProcessor "com.google.dagger:dagger-compiler:${cfgs.dagger}"
+    api "com.google.dagger:dagger-android:${cfgs.dagger}"
+    api "com.google.dagger:dagger-android-support:${cfgs.dagger}" // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:${cfgs.dagger}"
+
+    api 'me.yokeyword:fragmentationx:1.0.2'
+    api 'me.yokeyword:fragmentation-swipeback:1.3.6'
+
+
+
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'    //   RxPermissions 的使用方法详解
+    api 'io.reactivex.rxjava3:rxjava:3.0.0-RC2'
+    api 'commons-net:commons-net:3.5'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    api 'androidx.viewpager2:viewpager2:1.0.0'
+//    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    api 'me.yokeyword:eventbus-activity-scope:1.1.0'
+    api 'org.greenrobot:eventbus:3.0.0'
+
+    api "com.github.bumptech.glide:glide:${cfgs.glide_version}" //glide加载图片
+    api 'com.jakewharton:butterknife:10.1.0'    //引入ButterKnife
+
+}

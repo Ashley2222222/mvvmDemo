@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!--左侧返回按钮、标题Textview、右侧历史记录按钮标题栏-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="titleVm"
+            type="com.gci.mvvmdemo.TitleVM" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/title"
+        style="@style/title_bar">
+
+        <RelativeLayout
+            android:id="@+id/rl_for_back"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:background="#00000000"
+            android:clickable="true"
+            android:onClick="@{titleVm::back}"
+            android:gravity="center_vertical"><!--android:onClick="@{titleVm::back}"-->
+
+            <ImageButton
+                android:id="@+id/btn_for_back"
+                style="@style/btn_left"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="@dimen/margin_large_x"
+                android:onClick="@{titleVm::back}"
+                android:src="@drawable/back" /><!--      android:onClick="@{back}"-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/nav_title"
+            android:layout_gravity="center"
+            android:text="@{titleVm.title}" />
+
+    </RelativeLayout>
+
+</layout>

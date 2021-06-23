@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- 标题栏样式 -->
+    <style name="title_bar">
+        <item name="android:layout_height">@dimen/height_title_bar</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/title_blue</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!-- 左按钮样式 -->
+    <style name="btn_left">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_height">@dimen/icon_normal</item>
+        <item name="android:layout_width">@dimen/icon_normal</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <!-- 标题栏文字样式只有一行文字 -->
+    <style name="nav_title">
+        <item name="android:paddingBottom">@dimen/fix_5dp</item>
+        <item name="android:layout_height">63dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white_pure</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textSize">@dimen/font_title_bar</item>
+        <item name="android:layout_gravity">center_horizontal|center_vertical</item>
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <!-- 包裹内容，垂直排列的最简layout -->
+    <style name="ll_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/bg_color</item>
+    </style>
+</resources>
