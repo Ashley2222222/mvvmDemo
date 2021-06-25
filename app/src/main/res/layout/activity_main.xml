@@ -7,13 +7,13 @@
 
         <variable
             name="viewModel"
-            type="com.gci.mvvmdemo.MainVM" />
+            type="com.gci.mvvmdemo.viewModel.MainVM" />
         <variable
             name="user"
-            type="com.gci.mvvmdemo.User" />
+            type="com.gci.mvvmdemo.model.User" />
         <variable
             name="loginInfo"
-            type="com.gci.mvvmdemo.LoginInfo" />
+            type="com.gci.mvvmdemo.model.LoginInfo" />
     </data>
 
     <LinearLayout
@@ -50,7 +50,7 @@
             android:onClick="@{viewModel::click2}"
    />
 
-        <com.gci.mvvmdemo.LoginAutoCompleteEdittext
+        <com.gci.mvvmdemo.myWidget.LoginAutoCompleteEdittext
             android:id="@+id/username"
             android:layout_width="230dp"
             android:text="@{loginInfo.account}"

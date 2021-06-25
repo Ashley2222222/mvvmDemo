@@ -5,26 +5,26 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.gci.mvvmdemo.PhotoActivityVM" />
+            type="com.gci.mvvmdemo.viewModel.PhotoActivityVM" />
+
         <variable
             name="titleVm"
-            type="com.gci.mvvmdemo.TitleVM" />
+            type="com.gci.mvvmdemo.viewModel.TitleVM" />
 
     </data>
 
     <LinearLayout style="@style/ll_normal">
 
-        <RelativeLayout
-            style="@style/title_bar">
+        <RelativeLayout style="@style/title_bar">
 
             <include
                 layout="@layout/header_back"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                bind:titleVm="@{titleVm}"
-                /><!--                app:back="@{viewModel.back()"-->
+                bind:titleVm="@{titleVm}" /><!--                app:back="@{viewModel.back()"-->
         </RelativeLayout>
 
         <LinearLayout
@@ -41,20 +41,9 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <include layout="@layout/layout_pic_configs"
+                bind:viewModelChild="@{viewModel}" />
 
-                android:clipChildren="false">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:overScrollMode="never" />
-            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </layout>

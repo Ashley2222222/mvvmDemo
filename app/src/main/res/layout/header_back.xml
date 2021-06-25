@@ -6,7 +6,7 @@
     <data>
         <variable
             name="titleVm"
-            type="com.gci.mvvmdemo.TitleVM" />
+            type="com.gci.mvvmdemo.viewModel.TitleVM" />
     </data>
 
     <RelativeLayout

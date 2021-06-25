@@ -3,4 +3,5 @@
 	<string name="app_name">mvvm例程</string>
 	<string name="login_username_width">1</string>
 	<string name="picture_title">图片标题</string>
+	<string name="language">语言</string>
 </resources>

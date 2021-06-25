@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">MVVMDemo</string>
+    <string name="app_drag_delete">拖动到此处删除</string>
+    <string name="app_let_go_drag_delete">松手即可删除</string>
+    <string name="app_wechat_send">发送</string>
+    <string name="app_wechat_send_num">发送(%1$d/%2$d)</string>
     <string name="login_username_width">1</string>
-    <string name="picture_title">photo</string>
+    <string name="picture_title">图片标题</string>
+    <string name="language">语言</string>
 </resources>
